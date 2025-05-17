@@ -12,16 +12,23 @@ Links:
 - https://plantuml.com/en/component-diagram
 - https://plantuml.com/en/sequence-diagram
 - https://plantuml.com/en/state-diagram
+- https://plantuml.com/en/ie-diagram (UML class diagrams with entities)
 - https://plantuml.com/en/mindmap-diagram (non-UML)
 - https://plantuml.com/en/json (non-UML)
-- https://plantuml.com/en/ascii-math (non-UML, geht nicht in VS Code und Eclipse)
+- https://plantuml.com/en/ascii-math (non-UML, geht nicht in VS Code und Eclipse oder mit `-tsvg`)
 - https://github.com/plantuml-stdlib/C4-PlantUML (non-UML)
 - https://c4model.com/
 - https://github.com/davidmoten/plantuml-maven-plugin
 
 ~~~
 $ mvn clean verify
-$ java -jar target/plantuml.jar --version
+$ xdg-open target/generated-diagrams/index.md
+
+$ PLANTUML=~/.m2/repository/net/sourceforge/plantuml/plantuml/1.2025.2/plantuml-1.2025.2.jar
+$ java -jar $PLANTUML -version
+$ java -jar $PLANTUML -help
+$ java -jar $PLANTUML -tpng -o output/png src/docs/
+$ java -jar $PLANTUML -tsvg -o output/svg src/docs/
 ~~~
 
 ## IDEs
@@ -33,5 +40,5 @@ $ java -jar target/plantuml.jar --version
 
 ### Eclipse
 
-- Install the  plugin "PlantUML" of the Norwegian Univ. of Science and Tech
+- Install the plugin "PlantUML" of the Norwegian Univ. of Science and Tech
 - Open the view "PlantUML"

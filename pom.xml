@@ -50,13 +50,7 @@
             <version>${plantuml.version}</version>
           </dependency>
           <dependency>
-            <!-- required for math -->
-            <groupId>org.scilab.forge</groupId>
-            <artifactId>jlatexmath</artifactId>
-            <version>1.0.7</version>
-          </dependency>
-          <dependency>
-            <!-- required for math -->
+            <!-- required for math when generating SVG -->
             <groupId>org.apache.xmlgraphics</groupId>
             <artifactId>batik-all</artifactId>
             <version>1.19</version>
