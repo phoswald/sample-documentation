@@ -1,0 +1,18 @@
+@startuml
+object Object01 {
+    id = 123
+    name = "Dummy"
+}
+object Object02
+object Object03
+object Object04
+object Object05
+object Object06
+Object01 <|-- Object02
+Object01 -- Object03
+Object01 *-- Object04
+Object01 o-- Object05
+Object01 .. Object06
+note "Note <b>0</b><u>1</u>" as N1
+note left of Object01: Note 02
+@enduml

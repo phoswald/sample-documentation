@@ -1,0 +1,12 @@
+@startuml
+component Component01
+component Component02
+component Component03 {
+    component Component031
+    component Component032
+}
+interface Interface01
+Interface01 - Component01
+Component01 --> Component03
+Component02 ..> Interface01
+@enduml

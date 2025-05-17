@@ -1,0 +1,16 @@
+@startuml
+class Class01 {
+    field1
+    field2: string
+    method1()
+    method2(a: int, b: int): string
+}
+interface Interface01
+Interface01 <|-- Class01
+Class01 -- Class02
+Class01 *-- Class03
+Class01 o-- Class04
+Class01 .. Class05
+note "Note <b>0</b><u>1</u>" as N1
+note left of Interface01: Note 02
+@enduml
