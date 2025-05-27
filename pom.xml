@@ -11,77 +11,11 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <plantuml.version>1.2025.2</plantuml.version>
   </properties>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>com.github.davidmoten</groupId>
-        <artifactId>plantuml-maven-plugin</artifactId>
-        <version>0.2.13</version>
-        <executions>
-          <execution>
-            <id>generate-diagrams</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>generate</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <sources>
-            <directory>${basedir}/src/docs</directory>
-            <includes>
-              <include>/**/*.puml</include>
-            </includes>
-          </sources>
-          <outputDirectory>${project.build.directory}/generated-diagrams</outputDirectory>
-          <formats>
-            <format>png</format>
-            <format>svg</format>
-          </formats>
-        </configuration>
-        <dependencies>
-          <dependency>
-            <!-- override version included in plugin: v1.2025.0 for v0.2.13 -->
-            <groupId>net.sourceforge.plantuml</groupId>
-            <artifactId>plantuml</artifactId>
-            <version>${plantuml.version}</version>
-          </dependency>
-          <dependency>
-            <!-- required for math when generating SVG -->
-            <groupId>org.apache.xmlgraphics</groupId>
-            <artifactId>batik-all</artifactId>
-            <version>1.19</version>
-          </dependency>
-        </dependencies>
-      </plugin>
-      <!--<plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>3.8.1</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <artifactItems>
-            <artifactItem>
-              <groupId>net.sourceforge.plantuml</groupId>
-              <artifactId>plantuml</artifactId>
-              <version>${plantuml.version}</version>
-              <destFileName>plantuml.jar</destFileName>
-            </artifactItem>
-          </artifactItems>
-          <outputDirectory>${project.build.directory}</outputDirectory>
-        </configuration>
-      </plugin>-->
-    </plugins>
-  </build>
+  <modules>
+    <module>plantuml</module>
+    <module>mermaid</module>
+  </modules>
 
 </project>

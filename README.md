@@ -31,12 +31,32 @@ $ java -jar $PLANTUML -tpng -o output/png src/docs/
 $ java -jar $PLANTUML -tsvg -o output/svg src/docs/
 ~~~
 
+## Mermaid
+
+Links:
+
+- https://mermaid.js.org/intro/
+- https://mermaid.js.org/syntax/classDiagram.html
+- https://github.com/mermaid-js/mermaid-cli
+
+~~~
+$ docker run -it --rm ghcr.io/mermaid-js/mermaid-cli/mermaid-cli
+~~~
+
 ## IDEs
 
 ### Visual Studio Code
 
+PlantUML:
+
 - Install the extension "PlantUML" of jebbs (jebbs.plantuml)
 - Open the view "PlantUML Preview Current Diagram"
+
+Mermaid (TODO):
+
+- Install the extension "Mermaid Chart" of mermaidchart.com (mermaidchart.vscode-mermaid-chart)
+  The Mermaid Chart extension seamlessly integrates with the Mermaid Chart service.
+  To use the extension, you need an account. 
 
 ### Eclipse
 
