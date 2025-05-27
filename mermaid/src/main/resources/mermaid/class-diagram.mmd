@@ -1,23 +1,16 @@
 classDiagram
-    note "From Duck till Zebra"
-    Animal <|-- Duck
-    note for Duck "can fly, can swim, can dive, can help in debugging"
-    Animal <|-- Fish
-    Animal <|-- Zebra
-    Animal : +int age
-    Animal : +String gender
-    Animal: +isMammal()
-    Animal: +mate()
-    class Duck{
-        +String beakColor
-        +swim()
-        +quack()
+    %% This is a comment!
+    class Class01 {
+        field1
+        field2: string
+        method1()
+        method2(a: int, b: int): string
     }
-    class Fish{
-        -int sizeInFeet
-        -canEat()
-    }
-    class Zebra{
-        +bool is_wild
-        +run()
-    }
+    interface Interface01
+    Interface01 <|-- Class01
+    Class01 --> Class02
+    Class01 *-- Class03
+    Class01 o-- Class04
+    Class01 .. Class05
+    note "A free floating note"
+    note for Interface01 "A note attached to an interface"

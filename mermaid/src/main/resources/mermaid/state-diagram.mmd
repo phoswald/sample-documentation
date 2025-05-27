@@ -1,8 +1,8 @@
 stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
+    %% This is a comment!
+    direction LR
+    [*] --> State1
+    State1 --> State2 : Event01
+    State2 --> State3 : Event02
+    State3 --> State1 : Event03
+    State3 --> [*]

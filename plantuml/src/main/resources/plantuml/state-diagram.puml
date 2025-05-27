@@ -1,7 +1,10 @@
 @startuml
-[*] --> State1
+' The type of arrow indicates the direction, e.g:
+' from left to right: -> oder -right->
+' from top to bottom: --> oder -down->
+[*] -> State1
 State1 -> State2 : Event01
 State2 -> State3 : Event02
 State3 -> State1 : Event03
-State3 --> [*]
+State3 -> [*]
 @enduml

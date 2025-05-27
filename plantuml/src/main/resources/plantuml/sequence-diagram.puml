@@ -1,18 +1,19 @@
 @startuml
+' This is a comment!
 actor Actor01
 participant Participant01
-Actor01 -> Participant01
+Actor01 --> Participant01
 activate Participant01
-Participant01 -> Participant02: Request
+Participant01 -> Participant02 : Request
 activate Participant02
-Participant01 <-- Participant02: Response
+Participant01 <-- Participant02 : Response
 deactivate Participant02
 database Database01
 queue Queue01
-alt Normalfall
-    Participant01 -> Database01
-else Sonderfall
-    Participant01 --> Queue01
+alt standard case
+    Participant01 ->> Database01 : Message
+else exceptional case
+    Participant01 ->> Queue01 : Message
 end
 deactivate Participant01
 @enduml

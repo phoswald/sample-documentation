@@ -22,7 +22,8 @@ Links:
 
 ~~~
 $ mvn clean verify
-$ xdg-open target/generated-diagrams/index.md
+$ xdg-open xdg-open target/classes/plantuml/generated
+$ xdg-open xdg-open target/classes/plantuml/generated/index.md
 
 $ PLANTUML=~/.m2/repository/net/sourceforge/plantuml/plantuml/1.2025.2/plantuml-1.2025.2.jar
 $ java -jar $PLANTUML -version
@@ -40,7 +41,9 @@ Links:
 - https://github.com/mermaid-js/mermaid-cli
 
 ~~~
-$ docker run -it --rm ghcr.io/mermaid-js/mermaid-cli/mermaid-cli
+$ mvn clean verify
+$ xdg-open target/classes/mermaid/generated/
+$ docker run -it --rm ghcr.io/mermaid-js/mermaid-cli/mermaid-cli --help
 ~~~
 
 ## IDEs
@@ -49,14 +52,14 @@ $ docker run -it --rm ghcr.io/mermaid-js/mermaid-cli/mermaid-cli
 
 PlantUML:
 
-- Install the extension "PlantUML" of jebbs (jebbs.plantuml)
+- Install the extension "PlantUML" from jebbs (jebbs.plantuml)
 - Open the view "PlantUML Preview Current Diagram"
 
-Mermaid (TODO):
+Mermaid:
 
-- Install the extension "Mermaid Chart" of mermaidchart.com (mermaidchart.vscode-mermaid-chart)
-  The Mermaid Chart extension seamlessly integrates with the Mermaid Chart service.
-  To use the extension, you need an account. 
+- Install the extension "Mermaid Preview" from Vlad Stirbu (vstirbu/vscode-mermaid-preview)
+- Open the view "Mermaid preview: Preview diagram"
+- There's no need to login in order to preview Mermaid diagrams
 
 ### Eclipse
 

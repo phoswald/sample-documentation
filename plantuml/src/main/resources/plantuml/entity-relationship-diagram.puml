@@ -1,4 +1,5 @@
 @startuml
+' This is a comment!
 entity Entity01 {
   * identifying_attribute : number <<generated>>
   --
