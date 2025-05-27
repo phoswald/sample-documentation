@@ -6,34 +6,10 @@
 </head>
 
 <body>
-  Here is a mermaid diagram:
+  <h1>Mermaid Sample</h1>
   <pre class="mermaid">
-    ---
-    title: Animal example
-    ---
-    classDiagram
-        note "From Duck till Zebra"
-        Animal <|-- Duck
-        note for Duck "can fly, can swim, can dive, can help in debugging"
-        Animal <|-- Fish
-        Animal <|-- Zebra
-        Animal : +int age
-        Animal : +String gender
-        Animal: +isMammal()
-        Animal: +mate()
-        class Duck{
-            +String beakColor
-            +swim()
-            +quack()
-        }
-        class Fish{
-            -int sizeInFeet
-            -canEat()
-        }
-        class Zebra{
-            +bool is_wild
-            +run()
-        }
+    flowchart LR
+        Box01 --> Box02
   </pre>
 
   <script type="module">

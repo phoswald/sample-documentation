@@ -24,7 +24,9 @@ Links:
 $ mvn clean verify
 $ xdg-open xdg-open target/classes/plantuml/generated
 $ xdg-open xdg-open target/classes/plantuml/generated/index.md
+~~~
 
+~~~
 $ PLANTUML=~/.m2/repository/net/sourceforge/plantuml/plantuml/1.2025.2/plantuml-1.2025.2.jar
 $ java -jar $PLANTUML -version
 $ java -jar $PLANTUML -help
@@ -43,7 +45,15 @@ Links:
 ~~~
 $ mvn clean verify
 $ xdg-open target/classes/mermaid/generated/
+~~~
+
+~~~
 $ docker run -it --rm ghcr.io/mermaid-js/mermaid-cli/mermaid-cli --help
+~~~
+
+~~~
+$ nginx-start $(pwd)/src/main/webapp 8080
+$ xdg-open http://localhost:8080
 ~~~
 
 ## IDEs
