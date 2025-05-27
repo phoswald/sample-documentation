@@ -1,7 +1,7 @@
 #!/bin/bash
 SOURCE_DIR="src/main/resources/mermaid"
 TARGET_DIR="target/classes/mermaid/generated"
-EXTENSION="png"
+EXTENSION="${1:-png}"
 DOCKER_IMAGE="ghcr.io/mermaid-js/mermaid-cli/mermaid-cli"
 DOCKER_USER="$(id -u):$(id -g)"
 mkdir -p "${TARGET_DIR}"

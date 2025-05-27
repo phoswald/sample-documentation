@@ -20,16 +20,29 @@
         <version>3.5.0</version>
         <executions>
           <execution>
-            <id>exec-mermaid</id>
+            <id>mermaid-png</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>exec</goal>
             </goals>
             <configuration>
               <executable>${project.basedir}/build-mermaid.sh</executable>
-              <!--<arguments>
-                <argument>...</argument>
-              </arguments>-->
+              <arguments>
+                <argument>png</argument>
+              </arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>mermaid-svg</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <executable>${project.basedir}/build-mermaid.sh</executable>
+              <arguments>
+                <argument>svg</argument>
+              </arguments>
             </configuration>
           </execution>
         </executions>
