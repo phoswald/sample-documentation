@@ -1,3 +1,4 @@
+
 # Basic Features
 
 These features all work with:
@@ -5,6 +6,7 @@ These features all work with:
 - GitHub
 - Markdown Viewer extension for Chrome with the "gfm" option. 
 - Visual Studio Code
+- Eclipse (**with limitations**, as described below)
 
 # Heading
 
@@ -37,13 +39,12 @@ The second format for sub-headings uses **dashes** on the next line.
 Paragraphs are separated
 by a **blank line**.
 
-**Two spaces** at the end of a line  
-produces a line break. Unfortunately they are usually not visible in text editors.
-
-A **line break** can also be produced by a **backslash** \
+A **line break** can be produced by **two spaces**  
+at the end of a line. Unfortunately, this is usually not visible in text editors.
+Or, a **line break** can also be produced by a **backslash** \
 at the end of the line.\
-This works in GitHub, Visual Studio Code, marked and dillinger,
-but **not** in Eclipse, markdownlivepreview or showdownjs.
+
+However, **Eclipse** does not support backslash for linke breaks.
 
 Markdown uses backslahses (\\) to escape \*, \{ , \# and more.
 
@@ -56,6 +57,8 @@ Strong emphasis, aka bold, with double **asterisks** or __underscores__.
 Combined emphasis with **asterisks and _underscores_**.
 
 Strikethrough uses two ~~tildes~~.
+
+However, **Eclipse** does not support single oder double underscores.
 
 ## Headings can also contain ~~strikethrough~~ or `monospace` or \\ to escape \*, \{ and \# 
 
@@ -97,11 +100,11 @@ Numbered list (using `1.`):
 
 1. lather
 2. rinse
-3. repeat
+3. repeat (nesting not supported by **Eclipse**)
    1. sub
    2. sub
 
-Numbered list (using `1)`):
+Numbered list (using `1)`, not supported by **Eclipse**):
 
 1) lather
 2) rinse
@@ -130,6 +133,8 @@ Source code can be indented by four **spaces**:
     #!/bin/sh
     echo 'Hello, world!'
 
+Fenced code blocks offer an alternative syntax without indentiation. 
+
 Source code can be fenced by three **backticks**:
 
 ```
@@ -144,14 +149,11 @@ Source code can be fenced by **three tildes**:
 echo 'Hello, world!'
 ~~~
 
-Fenced code blocks offer an alternative syntax without indentiation. 
-They work in GitHub, Visual Studio Code, Eclipse, marked, dillinger and showdownjs,
-but **not** markdownlivepreview (incorrect layout).
-
 ## Blockquotes
 
 > Markdown uses email-style > characters for blockquoting.
-> Quotes can also contain line breaks. \
+> Quotes can also contain line breaks using two spaces.  
+> Quotes can also contain line breaks using backslash. \
 > Quotes can also contain ~~strikethrough~~ or `monospace` or \\ to escape \*, \{ and \#.  
 > Quotes can also contain lists:
 > 
@@ -159,10 +161,12 @@ but **not** markdownlivepreview (incorrect layout).
 > - oranges
 > - pears
 
+However, **Eclipse** does not support backslash for linke breaks.
+
 ## Tables
 
-**Tables** are an extension defined by GitHub Flavored Markdown. 
-They also work in Visual Studio Code, marked, dillinger and showdownjs, but **not** in Eclipse or markdownlivepreview.
+**Tables** are an extension defined by GitHub Flavored Markdown.
+However, **Eclipse** does not support tables.
 
 There must be at least 3 dashes separating each header cell.
 The outer pipes (`|`) are optional, and you don't need to make the
@@ -180,100 +184,12 @@ xx | yy | zz
 a  | b  | c  
 1  | 2  | 3  
 
-# GitHub only
-
-See:
-
-- https://docs.github.com/en/get-started/writing-on-github
-- https://docs.github.com/de/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams
-- https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
-
-## Mermaid
-
-Here is a simple flow chart.
-This also works in "Markdown Preview Enhanced" for Visual Studio Code and "Markdown Viewer" for Chrome.
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-## GeoJSON
-
-You can use GeoJSON or TopoJSON syntax to create interactive maps:
-
-```geojson
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "id": 1,
-      "properties": {
-        "ID": 0
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-              [-90,35],
-              [-90,30],
-              [-85,30],
-              [-85,35],
-              [-90,35]
-          ]
-        ]
-      }
-    }
-  ]
-}
-```
-
-## Aufgabenlisten 
-
-Here is a list of tasks.
-This also works in "Markdown Preview Enhanced" for Visual Studio Code.
-
-- [ ] open task
-- [x] completed task
-
-## Alerts
-
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
-
-> [!TIP]
-> Helpful advice for doing things better or more easily.
-
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
-
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
-
-## Colors
-
-The visualization of the color is only supported in issues, pull requests, and discussions:
-
-The background color is `#ffffff` for light mode and `#000000` for dark mode.
-
-## Emojis
-
-This PR looks great :+1: It's ready to merge! :shipit:
-
 # Corner Cases
 
 ## Lists and paragraphs
 
-Lists immediately following a paragraph work in GitHub, Visual Studio Code, Eclipse, marked, dillinger and showdownjs,
-but **not** in markdownlivepreview. Remember that a paragraph should always be surrounded by empty lines, 
-unlike here:
+Lists immediately following a paragraph work in GitHub, Visual Studio Code and Eclipse.
+Remember that a paragraph should always be surrounded by empty lines, unlike here:
 - apples
 - oranges
 

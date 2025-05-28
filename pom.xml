@@ -14,8 +14,9 @@
   </properties>
 
   <modules>
-    <module>plantuml</module>
+    <module>markdown</module>
     <module>mermaid</module>
+    <module>plantuml</module>
   </modules>
 
 </project>
