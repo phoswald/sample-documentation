@@ -9,6 +9,8 @@ Links:
 
 - https://en.wikipedia.org/wiki/Markdown
 - https://www.markdownguide.org/cheat-sheet/
+- https://spec.commonmark.org/
+- https://github.github.com/gfm/
 
 Examples:
 

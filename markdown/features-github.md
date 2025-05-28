@@ -5,6 +5,8 @@ See:
 
 - https://github.github.com/gfm/
 - https://docs.github.com/en/get-started/writing-on-github
+- https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+- https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting
 
 ## Mermaid
 
@@ -84,3 +86,9 @@ The background color is `#ffffff` for light mode and `#000000` for dark mode.
 ## Emojis
 
 This PR looks great :+1: It's ready to merge! :shipit:
+
+## Mathematical Expressions
+
+**The Cauchy-Schwarz Inequality**:
+
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
