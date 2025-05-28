@@ -11,7 +11,8 @@ See:
 ## Mermaid
 
 Here is a simple flow chart.
-This also works in "Markdown Preview Enhanced" or "Mermaid Preview" for Visual Studio Code.
+This also works in "Markdown Preview Enhanced" or "Mermaid Preview" for Visual Studio Code,
+and also in the "Markdown Viewer" browser extension if the option "mermaid" is activated.
 
 ```mermaid
 flowchart TD;
@@ -92,3 +93,5 @@ This PR looks great :+1: It's ready to merge! :shipit:
 **The Cauchy-Schwarz Inequality**:
 
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+
+This also works in the "Markdown Viewer" browser extension if the option "mathjax" is activated.

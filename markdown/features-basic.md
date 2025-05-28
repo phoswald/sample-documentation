@@ -4,7 +4,7 @@
 These features all work with:
 
 - GitHub
-- Markdown Viewer extension for Chrome with the "gfm" option. 
+- Markdown Viewer browser extension for Chrome with the "gfm" option. 
 - Visual Studio Code
 - Eclipse (**with limitations**, as described below)
 
