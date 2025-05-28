@@ -1,0 +1,19 @@
+sequenceDiagram
+    %% This is a comment!
+    actor Actor01
+    participant Participant01
+    Actor01 -->> Participant01: use
+    activate Participant01
+    participant Participant02
+    Participant01 ->> Participant02: Request
+    activate Participant02
+    Participant02 -->> Participant01: Response
+    deactivate Participant02
+    participant Database01
+    participant Queue01
+    alt standard case
+        Participant01 -) Database01: Message
+    else exceptional case
+        Participant01 -) Queue01: Message
+    end
+    deactivate Participant01

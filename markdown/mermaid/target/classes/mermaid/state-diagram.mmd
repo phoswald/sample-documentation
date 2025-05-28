@@ -1,0 +1,8 @@
+stateDiagram-v2
+    %% This is a comment!
+    direction LR
+    [*] --> State1
+    State1 --> State2 : Event01
+    State2 --> State3 : Event02
+    State3 --> State1 : Event03
+    State3 --> [*]

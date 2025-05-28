@@ -1,0 +1,12 @@
+erDiagram
+    %% This is a comment!
+    Entity01 {
+        number identifying_attribute PK
+        number mandatory_attribute
+        number optional_attribute1 FK
+        string optional_attribute2
+    }
+    Entity01 }|..|| Entity02 : uses
+    Entity03 }o..o| Entity04 : uses
+    Entity05 ||--o{ Entity06 : uses
+    Entity07 |o--|| Entity08 : uses
