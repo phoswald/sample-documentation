@@ -62,12 +62,14 @@ Links:
 - https://github.com/mermaid-js/mermaid-cli
 
 ~~~
-$ mvn clean verify
-$ xdg-open target/classes/mermaid/generated/
+$ npm install -g @mermaid-js/mermaid-cli
+$ mmdc --version
+$ mmdc --help
 ~~~
 
 ~~~
-$ docker run -it --rm ghcr.io/mermaid-js/mermaid-cli/mermaid-cli --help
+$ mvn clean verify
+$ xdg-open target/classes/mermaid/generated/
 ~~~
 
 ~~~
