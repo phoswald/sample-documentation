@@ -1,6 +1,11 @@
 
 # Basic Features
 
+See:
+
+- [README](../README.md)
+- https://github.github.com/gfm/
+
 These features all work with:
 
 - GitHub
