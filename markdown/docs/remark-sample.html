@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Remark Sample</title>
+</head>
+
+<body>
+  <h1>Remark Sample</h1>
+  <p>Featuring: remark (including GFM), rehype, unified</p>
+  <div id="content"></div>
+  <script type="module">
+    import { unified } from 'https://cdn.jsdelivr.net/npm/unified/+esm';
+    import remarkParse from 'https://cdn.jsdelivr.net/npm/remark-parse@11/+esm';
+    import remarkGfm from 'https://cdn.jsdelivr.net/npm/remark-gfm@4/+esm';
+    import remarkRehype from 'https://cdn.jsdelivr.net/npm/remark-rehype@11/+esm';
+    import rehypeSanitize from 'https://cdn.jsdelivr.net/npm/rehype-sanitize@6.0.0/+esm';
+    import rehypeStringify from 'https://cdn.jsdelivr.net/npm/rehype-stringify@10/+esm';
+    const response = await fetch("md/features-basic.md");
+    const responseMarkdown = await response.text();
+    const responseHtml = await unified()
+      .use(remarkParse)
+      .use(remarkGfm)
+      .use(remarkRehype)
+      .use(rehypeSanitize)
+      .use(rehypeStringify)    
+      .process(responseMarkdown);
+    document.getElementById('content').innerHTML = String(responseHtml);
+  </script>
+</body>
+
+</html>

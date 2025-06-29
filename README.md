@@ -3,6 +3,12 @@
 
 Experiments with documentation as code
 
+~~~
+$ nginx-start $(pwd) 8080
+~~~
+
+See: http://localhost:8080/
+
 ## Markdown
 
 Links: 
@@ -14,51 +20,68 @@ Links:
 
 Examples:
 
-- [Basic Features](markdown/features-basic.md)
-- [GitHub Features](markdown/features-github.md)
-
-### Implementations
-
-For a complete list, see [github.com/markdown](https://github.com/markdown/markdown.github.com/wiki/Implementations).
-
-- [showdownjs](https://github.com/showdownjs/showdown): 
-  Javascript Markdown to HTML converter, can be used client side (in the browser) or server side (with NodeJS).
-- [marked](https://github.com/markedjs/marked): 
-  Javascript Markdown to HTML converter, supports CommonMark and GFM.
-  It can be used client side (in the browser), server side (with NodeJS) or from a command line interface (CLI).
-  Marked does __not__ sanitize the output HTML.
-- [remark](https://github.com/remarkjs/remark):
-  Javascript Markdown to HTML converter. It can generate and reformat Markdown too.
-  Powered by plugins to do all kinds of things: 
-  check Markdown code style, transform safely to React, add a table of contents, or compile to man pages.
-
-#### Showdown.js
-
-~~~
-$ cd showdown-page
-$ npm init -y
-$ npm install webpack webpack-cli webpack-dev-server --save-dev
-$ npm run start:dev
-~~~
-
-#### Marked
+- [Basic Features](markdown/docs/md/features-basic.md)
+- [GitHub Features](markdown/docs/md/features-github.md)
 
 ~~~
 $ npm install -g marked
-$ echo -e "# foo\nbar" | marked
+$ marked --help
 
-$ cd marked-page
-$ npm init -y
-$ npm install webpack webpack-cli webpack-dev-server --save-dev
-$ npm run start:dev
+$ npm install -g remark-cli remark-html remark-gfm
+$ remark --help
+
+$ npm install -g showdown
+$ showdown --help
 ~~~
+
+~~~
+$ make clean && make all
+~~~
+
+See:
+
+- http://localhost:8080/markdown/docs/generated/marked/features-basic.html
+- http://localhost:8080/markdown/docs/generated/remark/features-basic.html
+- http://localhost:8080/markdown/docs/generated/showdown/features-basic.html
+- http://localhost:8080/markdown/docs/marked-sample.html
+- http://localhost:8080/markdown/docs/remark-sample.html
+- http://localhost:8080/markdown/docs/showdown-sample.html
+
+### Marked
+
+[Marked](https://github.com/markedjs/marked) is a Javascript Markdown to HTML converter.
+It supports CommonMark and GFM.
+It can be used client side (in the browser), server side (with NodeJS) or from a command line interface (CLI).
+Marked does not sanitize the output HTML (but DOMPurify can be used for that).
+
+### Remark
+
+[Remark](https://github.com/remarkjs/remark) is a Javascript Markdown to HTML converter. 
+It can generate and reformat Markdown and is powered by plugins to do all kinds of things: 
+check Markdown code style, transform safely to React, add a table of contents, or compile to man pages.
+
+Limitations: collapsed sections (`remark-collapse` does not do the job)
+
+### Showdown.js
+
+[Showdownjs](https://github.com/showdownjs/showdown) is a Javascript Markdown to HTML converter.
+It can be used client side (in the browser) or server side (with NodeJS).
+
+Limitations: line break by backslash, striketrough, nested lists, numbered lists using `1)`, tables
 
 ## Mermaid
 
 Links:
 
 - https://mermaid.js.org/intro/
+- https://mermaid.js.org/intro/getting-started.html
 - https://mermaid.js.org/syntax/classDiagram.html
+- https://mermaid.js.org/syntax/sequenceDiagram.html
+- https://mermaid.js.org/syntax/stateDiagram.html
+- https://mermaid.js.org/syntax/c4.html
+- https://mermaid.js.org/syntax/flowchart.html
+- https://mermaid.js.org/syntax/entityRelationshipDiagram.html
+- https://mermaid.js.org/syntax/mindmap.html
 - https://github.com/mermaid-js/mermaid-cli
 
 Examples: [Diagrams](mermaid/docs/diagrams.md)
@@ -71,10 +94,9 @@ $ mmdc --help
 
 ~~~
 $ make clean && make all
-
-$ nginx-start $(pwd)/docs 8080
-$ xdg-open http://localhost:8080/
 ~~~
+
+See: http://localhost:8080/mermaid/docs/mermaid-sample.html
 
 ## PlantUML
 

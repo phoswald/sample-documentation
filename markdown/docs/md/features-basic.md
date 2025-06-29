@@ -3,7 +3,7 @@
 
 See:
 
-- [README](../README.md)
+- [README](../../README.md)
 - https://github.github.com/gfm/
 
 These features all work with:
@@ -47,7 +47,7 @@ by a **blank line**.
 A **line break** can be produced by **two spaces**  
 at the end of a line. Unfortunately, this is usually not visible in text editors.
 Or, a **line break** can also be produced by a **backslash** \
-at the end of the line.\
+at the end of the line.
 
 However, **Eclipse** does not support backslash for linke breaks.
 
