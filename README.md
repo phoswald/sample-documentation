@@ -18,11 +18,6 @@ Links:
 - https://spec.commonmark.org/
 - https://github.github.com/gfm/
 
-Examples:
-
-- [Basic Features](markdown/docs/md/features-basic.md)
-- [GitHub Features](markdown/docs/md/features-github.md)
-
 ~~~
 $ npm install -g marked
 $ marked --help
@@ -40,6 +35,8 @@ $ make clean && make all
 
 See:
 
+- [Basic Features](markdown/docs/md/features-basic.md)
+- [GitHub Features](markdown/docs/md/features-github.md)
 - http://localhost:8080/markdown/docs/generated/marked/features-basic.html
 - http://localhost:8080/markdown/docs/generated/remark/features-basic.html
 - http://localhost:8080/markdown/docs/generated/showdown/features-basic.html
@@ -84,8 +81,6 @@ Links:
 - https://mermaid.js.org/syntax/mindmap.html
 - https://github.com/mermaid-js/mermaid-cli
 
-Examples: [Diagrams](mermaid/docs/diagrams.md)
-
 ~~~
 $ npm install -g @mermaid-js/mermaid-cli
 $ mmdc --version
@@ -96,7 +91,10 @@ $ mmdc --help
 $ make clean && make all
 ~~~
 
-See: http://localhost:8080/mermaid/docs/mermaid-sample.html
+See:
+
+- [Diagrams](mermaid/docs/diagrams.md)
+- http://localhost:8080/mermaid/docs/mermaid-sample.html
 
 ## PlantUML
 
@@ -116,8 +114,6 @@ Links:
 - https://c4model.com/
 - https://github.com/davidmoten/plantuml-maven-plugin
 
-Examples: [Diagrams](plantuml/docs/diagrams.md)
-
 ~~~
 $ mvn clean verify
 ~~~
@@ -129,6 +125,8 @@ $ java -jar $PLANTUML -help
 $ java -jar $PLANTUML -tpng -o output/png src/docs/
 $ java -jar $PLANTUML -tsvg -o output/svg src/docs/
 ~~~
+
+See: [Diagrams](plantuml/docs/diagrams.md)
 
 ## IDEs
 
