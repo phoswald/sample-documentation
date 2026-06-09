@@ -115,6 +115,11 @@ Links:
 - https://github.com/davidmoten/plantuml-maven-plugin
 
 ~~~
+$ sudo apt install graphviz
+$ which dot
+~~~
+
+~~~
 $ mvn clean verify
 ~~~
 
