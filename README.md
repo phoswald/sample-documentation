@@ -96,6 +96,14 @@ See:
 - [Diagrams](mermaid/docs/diagrams.md)
 - http://localhost:8080/mermaid/docs/mermaid-sample.html
 
+### Troubleshooting: Problem mit Chrome-Installation von Puppeteer
+
+Workaround: Für Installation Node v24 statt v26 verwenden!
+
+Das Flag `--allow-scripts puppeteer` löst zwar die Warnung bzgl.
+"allow-scripts  puppeteer@24.43.1 (postinstall: node install.mjs)" bei der Installation.
+Zur Laufzeit wird Chrome aber dennoch nicht gefunden.
+
 ## PlantUML
 
 Links:
